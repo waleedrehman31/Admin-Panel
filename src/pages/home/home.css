@@ -1,0 +1,9 @@
+.home {
+  flex: 4;
+  margin-top: 15px;
+}
+
+.home-widgets {
+  display: flex;
+  margin: 20px;
+}
