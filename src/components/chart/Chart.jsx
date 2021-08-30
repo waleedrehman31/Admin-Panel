@@ -5,7 +5,6 @@ import {
   XAxis,
   YAxis,
   Tooltip,
-  Legend,
   ResponsiveContainer,
 } from "recharts";
 
@@ -16,12 +15,7 @@ export default function Chart({ title, data, dataKey }) {
     <div className="chart">
       <h3 className="chart-title">{title}</h3>
       <ResponsiveContainer width="100%" aspect={4 / 1}>
-        <LineChart
-          data={data}
-          margin={{
-            bottom: 5,
-          }}
-        >
+        <LineChart data={data}>
           <XAxis dataKey="name" stroke="#5550bd" />
           <YAxis dataKey="Active User" stroke="#5550bd" />
           <Line
@@ -30,7 +24,6 @@ export default function Chart({ title, data, dataKey }) {
             stroke="#5550bd"
             activeDot={{ r: 8 }}
           />
-          <Legend />
           <Tooltip />
         </LineChart>
       </ResponsiveContainer>
