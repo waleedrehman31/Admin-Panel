@@ -1,5 +1,5 @@
 import React from "react";
-import "./sidebar.css";
+import { Link } from "react-router-dom";
 import {
   LineStyle,
   Timeline,
@@ -15,6 +15,8 @@ import {
   ChatBubbleOutline,
 } from "@material-ui/icons";
 
+import "./sidebar.css";
+
 export default function Sidebar() {
   return (
     <div className="sidebar">
@@ -23,10 +25,12 @@ export default function Sidebar() {
           {/*  Dashboard */}
           <h3 className="sidebar-title">Dashboard</h3>
           <ul className="sidebar-list">
-            <li className="sidebar-list-item active">
-              <LineStyle className="sidebar-icon" />
-              Home
-            </li>
+            <Link className="link" to="/">
+              <li className="sidebar-list-item active">
+                <LineStyle className="sidebar-icon" />
+                Home
+              </li>
+            </Link>
             <li className="sidebar-list-item">
               <Timeline className="sidebar-icon" />
               Analytics
@@ -42,14 +46,18 @@ export default function Sidebar() {
         <div className="sidebar-menu">
           <h3 className="sidebar-title">Quick Menu</h3>
           <ul className="sidebar-list">
-            <li className="sidebar-list-item ">
-              <PermIdentity className="sidebar-icon" />
-              Users
-            </li>
-            <li className="sidebar-list-item">
-              <Storefront className="sidebar-icon" />
-              Products
-            </li>
+            <Link className="link" to="/users">
+              <li className="sidebar-list-item">
+                <PermIdentity className="sidebar-icon" />
+                Users
+              </li>
+            </Link>
+            <Link className="link" to="/products">
+              <li className="sidebar-list-item">
+                <Storefront className="sidebar-icon" />
+                Products
+              </li>
+            </Link>
             <li className="sidebar-list-item">
               <AttachMoney className="sidebar-icon" />
               Transactions

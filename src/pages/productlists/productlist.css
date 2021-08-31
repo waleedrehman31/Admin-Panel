@@ -1,0 +1,44 @@
+.product-list {
+  flex: 4;
+}
+
+.products {
+  display: flex;
+  align-items: center;
+}
+
+.products-image {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.products-status {
+  display: flex;
+  align-items: center;
+}
+
+.products-status-icon {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 5px;
+  background-color: lightgreen;
+}
+
+.products-edit {
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background-color: #3bb077;
+  color: white;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.products-delete {
+  color: red;
+  cursor: pointer;
+}

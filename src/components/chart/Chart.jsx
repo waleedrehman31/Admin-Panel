@@ -17,7 +17,7 @@ export default function Chart({ title, data, dataKey }) {
       <ResponsiveContainer width="100%" aspect={4 / 1}>
         <LineChart data={data}>
           <XAxis dataKey="name" stroke="#5550bd" />
-          <YAxis dataKey="Active User" stroke="#5550bd" />
+          <YAxis dataKey={dataKey} stroke="#5550bd" />
           <Line
             type="monotone"
             dataKey={dataKey}
